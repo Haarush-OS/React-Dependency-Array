@@ -5,21 +5,12 @@ function App() {
   const [loading , SetLoading] = useState(false)
   const [crntTab , SetCrntTab] = useState(1)
   const [tabData , SetTabData] = useState({})
-  function Tab1() {
-    SetCrntTab(1)
-  }
-  function Tab2() {
-    SetCrntTab(2)
-    
-  }
-  function Tab3() {
-    SetCrntTab(3)
-    
-  }
-  function Tab4() {
-    SetCrntTab(4)
-    
-  }
+
+  const Tab1 = () => SetCrntTab(1)
+  const Tab2 = () => SetCrntTab(2)
+  const Tab3 = () => SetCrntTab(3)
+  const Tab4 = () => SetCrntTab(4)
+  
 
 
 useEffect( ()=>{
