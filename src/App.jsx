@@ -3,7 +3,7 @@ import axios from 'axios'
 
 function App() {
   const [loading , SetLoading] = useState(false)
-  const [crntTab , SetCrntTab] = useState(1)
+  const [PresentTAb , SetCrntTab] = useState(1)
   const [tabData , SetTabData] = useState({})
 
   const Tab1 = () => SetCrntTab(1)
@@ -19,7 +19,7 @@ useEffect( ()=>{
   const axiosfunc = async ()=>{
     
     SetLoading(true)
-    const res = await axios.get("https://jsonplaceholder.typicode.com/todos/"+crntTab)
+    const res = await axios.get("https://jsonplaceholder.typicode.com/todos/"+PresentTAb)
     SetLoading(false)
     SetTabData(res.data)
   }
